@@ -53,6 +53,8 @@ class ToDoAdapter : RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
             if (holder.cbToDo.isChecked) {
                 val repository = TodoRepository(TodoDatabase.getInstance(context))
                 holder.ivDelete.setImageResource(R.drawable.delete_im)
+                holder.cbToDo.isChecked = false
+
                 CoroutineScope(Dispatchers.IO).launch {
                     repository.delete(data[position])
                     val data = repository.getAllTodos()
