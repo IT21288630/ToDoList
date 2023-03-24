@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toDoRow"
+    android:id="@+id/todo_row_item"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="48dp">
 
     <CheckBox
         android:id="@+id/cbToDo"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="10"
+        android:layout_weight="8"
         android:text="CheckBox" />
 
     <ImageView
@@ -17,7 +18,5 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         app:srcCompat="@drawable/delete_im" />
 </LinearLayout>
